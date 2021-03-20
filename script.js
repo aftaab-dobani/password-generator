@@ -60,13 +60,15 @@ function generatePassword() {
   }
 
   if(selectedCharacter.length === 0){
-    alert("Invalid input, must choose a character");
+    alert("Invalid input, must choose a character")
   }
 
   for (var i = 0; i < passLength; i++ ){
     //console.log(Math.floor(Math.random() * selectedCharacter.length))
-    console.log(selectedCharacter[Math.floor(Math.random() * selectedCharacter.length)])
+    finalPassword += (selectedCharacter[Math.floor(Math.random() * selectedCharacter.length)]);
+    
   }
+  return finalPassword
 }
 
 // Add event listener to generate button
